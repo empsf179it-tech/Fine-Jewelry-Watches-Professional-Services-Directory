@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Fine & Time</title>
+  <meta name="description" content="Manage your professional directory profile, saved professionals, and enquiries.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+
+  <!-- Dashboard Layout -->
+  <div class="dashboard-layout">
+    <div class="dash-mobile-header">
+      <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text-primary);">
+  <img src="logo.png" alt="Fine Jewelry & Watches Directory" class="brand-logo-img">
+  <div class="logo-text">
+    <span class="logo-title">FINE & TIME</span>
+    <span class="logo-desc">Professional Directory</span>
+  </div>
+</a>
+      <button class="dash-hamburger" aria-label="Menu" style="background: none; border: none; cursor: pointer; display: flex; flex-direction: column; gap: 6px;">
+        <span style="width: 30px; height: 2px; background-color: var(--text-primary);"></span>
+        <span style="width: 30px; height: 2px; background-color: var(--text-primary);"></span>
+        <span style="width: 30px; height: 2px; background-color: var(--text-primary);"></span>
+      </button>
+    </div>
+    <aside class="dashboard-sidebar">
+      <div style="padding: 0 32px 32px;">
+        <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text-primary);">
+  <img src="logo.png" alt="Fine Jewelry & Watches Directory" class="brand-logo-img">
+  <div class="logo-text">
+    <span class="logo-title">FINE & TIME</span>
+    <span class="logo-desc">Professional Directory</span>
+  </div>
+</a>
+      </div>
+      <div class="sidebar-nav" id="dash-nav">
+        <a href="#" data-target="overview" class="active">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          Overview
+        </a>
+        <a href="#" data-target="saved">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+          Saved Professionals
+        </a>
+        <a href="#" data-target="searches">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          Recent Searches
+        </a>
+        <a href="#" data-target="enquiries">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          Enquiries
+        </a>
+        <a href="#" data-target="appointments">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+          Appointments
+        </a>
+        <a href="#" data-target="submit">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+          Submit Listing
+        </a>
+        <a href="#" data-target="settings">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          Settings
+        </a>
+        <a href="index.html" style="margin-top: 40px; color: #d32f2f;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+          Logout
+        </a>
+      </div>
+    </aside>
+    
+    <main class="dashboard-main dash-main">
+      
+      <!-- OVERVIEW -->
+      <div id="view-overview" class="dash-view">
+        <div class="dash-header">
+          <h2>Welcome back, John.</h2>
+          <p style="color: var(--text-secondary);">Here's an overview of your recent activity and saved profiles.</p>
+        </div>
+        
+        <div class="dash-grid">
+          <div class="dash-card">
+            <h4>Saved Professionals</h4>
+            <div class="dash-value" id="stat-saved">0</div>
+          </div>
+          <div class="dash-card">
+            <h4>Active Enquiries</h4>
+            <div class="dash-value">2</div>
+          </div>
+          <div class="dash-card">
+            <h4>Upcoming Appointments</h4>
+            <div class="dash-value">1</div>
+          </div>
+        </div>
+        
+        <h3 style="font-size: 24px; margin-bottom: 24px;">Recommended For You</h3>
+        <div class="prof-grid" id="dash-recom-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- SAVED PROFESSIONALS -->
+      <div id="view-saved" class="dash-view" style="display: none;">
+        <div class="dash-header">
+          <h2>Saved Professionals</h2>
+          <p style="color: var(--text-secondary);">Manage the specialists you've bookmarked.</p>
+        </div>
+        <div class="prof-grid" style="grid-template-columns: repeat(3, 1fr);" id="dash-saved-grid">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <!-- RECENT SEARCHES -->
+      <div id="view-searches" class="dash-view" style="display: none;">
+        <div class="dash-header">
+          <h2>Recent Searches</h2>
+        </div>
+        <div style="background: var(--bg-primary); border: 1px solid var(--border-color);">
+          <div class="search-item">
+            <div>
+              <h4 style="font-size: 16px; margin-bottom: 4px;">"Vintage Rolex Restoration"</h4>
+              <p style="font-size: 13px; color: var(--text-secondary);">Watch Repair &middot; London &middot; Today, 10:45 AM</p>
+            </div>
+            <a href="professionals.html" class="btn btn-outline" style="padding: 8px 16px; font-size: 12px;">SEARCH AGAIN</a>
+          </div>
+          <div class="search-item">
+            <div>
+              <h4 style="font-size: 16px; margin-bottom: 4px;">"Diamond Resetting"</h4>
+              <p style="font-size: 13px; color: var(--text-secondary);">Custom Jewelry &middot; Any Location &middot; Yesterday</p>
+            </div>
+            <a href="professionals.html" class="btn btn-outline" style="padding: 8px 16px; font-size: 12px;">SEARCH AGAIN</a>
+          </div>
+          <div class="search-item">
+            <div>
+              <h4 style="font-size: 16px; margin-bottom: 4px;">"Estate Jewelry Appraisal"</h4>
+              <p style="font-size: 13px; color: var(--text-secondary);">Appraisal &middot; New York &middot; Oct 4, 2026</p>
+            </div>
+            <a href="professionals.html" class="btn btn-outline" style="padding: 8px 16px; font-size: 12px;">SEARCH AGAIN</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SUBMIT LISTING -->
+      <div id="view-submit" class="dash-view" style="display: none;">
+        <div class="dash-header" style="text-align: center;">
+          <h2>Submit Professional Listing</h2>
+          <p style="color: var(--text-secondary);">Join our directory of verified experts. Your profile will be reviewed by our team.</p>
+        </div>
+        
+        <form id="submit-listing-form" style="background: var(--bg-primary); border: 1px solid var(--border-color); padding: 48px; max-width: 800px; margin: 0 auto;">
+          <div class="form-row">
+            <div class="form-group" style="margin: 0;">
+              <label>Business / Professional Name</label>
+              <input type="text" class="form-control" required>
+            </div>
+            <div class="form-group" style="margin: 0;">
+              <label>Professional Type</label>
+              <select class="form-control" required>
+                <option value="designer">Jewelry Designer</option>
+                <option value="watchmaker">Watchmaker</option>
+                <option value="gemologist">Gemologist</option>
+                <option value="appraiser">Appraiser</option>
+                <option value="store">Retail Store</option>
+                <option value="workshop">Workshop</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group" style="margin: 0;">
+              <label>Primary Specialty</label>
+              <input type="text" class="form-control" required placeholder="e.g., Antique Restoration">
+            </div>
+            <div class="form-group" style="margin: 0;">
+              <label>Location</label>
+              <input type="text" class="form-control" required placeholder="City, Country">
+            </div>
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group" style="margin: 0;">
+              <label>Contact Email</label>
+              <input type="email" class="form-control" required>
+            </div>
+            <div class="form-group" style="margin: 0;">
+              <label>Website (Optional)</label>
+              <input type="url" class="form-control" placeholder="https://">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label>Years of Experience</label>
+            <input type="number" class="form-control" required style="max-width: 150px;">
+          </div>
+          
+          <div class="form-group">
+            <label>Professional Description</label>
+            <textarea class="form-control" required placeholder="Describe your background, philosophy, and expertise..."></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label>Credentials & Certifications</label>
+            <textarea class="form-control" style="min-height: 80px;" placeholder="e.g., GIA Graduate Gemologist, WOSTEP Certified..."></textarea>
+          </div>
+          
+          <div style="padding: 24px; border: 1px dashed var(--border-color); text-align: center; margin-bottom: 32px; background: var(--bg-secondary);">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="margin-bottom: 12px; color: var(--text-secondary);"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
+            <p style="font-size: 14px; margin-bottom: 8px;">Upload Profile Image & Gallery</p>
+            <button type="button" class="btn btn-outline" style="padding: 8px 16px; font-size: 12px;">SELECT FILES</button>
+          </div>
+          
+          <div id="submit-msg" style="display: none; padding: 16px; background: #e8f5e9; color: #2e7d32; border-left: 3px solid #2e7d32; margin-bottom: 24px; font-size: 14px;">
+            PROFILE SUBMITTED FOR REVIEW. Our team will evaluate your listing shortly.
+          </div>
+          
+          <div style="text-align: center;">
+            <button type="submit" class="btn btn-primary">SUBMIT FOR REVIEW</button>
+          </div>
+        </form>
+      </div>
+      
+      <!-- Other Placeholder Views -->
+      <div id="view-enquiries" class="dash-view" style="display: none;">
+        <div class="dash-header"><h2>Enquiries</h2><p>Track your sent enquiries.</p></div>
+        <p style="color: var(--text-secondary);">You have 2 active enquiries. Functionality available in full platform.</p>
+      </div>
+      
+      <div id="view-appointments" class="dash-view" style="display: none;">
+        <div class="dash-header"><h2>Appointments</h2><p>Manage your scheduled meetings.</p></div>
+        <p style="color: var(--text-secondary);">You have 1 upcoming appointment. Functionality available in full platform.</p>
+      </div>
+      
+      <div id="view-settings" class="dash-view" style="display: none;">
+        <div class="dash-header"><h2>Settings</h2><p>Manage account preferences.</p></div>
+        <p style="color: var(--text-secondary);">Settings module available in full platform.</p>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Demo Data
+    const professionals = [
+      { id: 'p1', name: 'Isabella Hart', title: 'Fine Jewelry Designer', location: 'New York, USA', rating: 4.9, reviews: 142, image: 'images/image-12.png', desc: 'Isabella specializes in creating unique, narrative-driven bespoke jewelry.' },
+      { id: 'p2', name: 'Marcus Bennett', title: 'Luxury Watchmaker', location: 'London, UK', rating: 5.0, reviews: 85, image: 'images/image-19.png', desc: 'Expert restoration and servicing of vintage Swiss mechanical timepieces.' },
+      { id: 'p3', name: 'Sofia Romano', title: 'Gemologist & Appraiser', location: 'Milan, Italy', rating: 4.8, reviews: 64, image: 'images/image-16.png', desc: 'GIA certified gemologist offering detailed laboratory reports.' },
+      { id: 'p4', name: 'Daniel Mercer', title: 'Fine Jewelry Specialist', location: 'New York, USA', rating: 4.9, reviews: 210, image: 'images/image-34.png', desc: 'Consultation on high-end estate jewelry acquisition.' }
+    ];
+
+    // Nav Logic
+    const navLinks = document.querySelectorAll('#dash-nav a[data-target]');
+    const views = document.querySelectorAll('.dash-view');
+    
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        
+        const target = link.getAttribute('data-target');
+        views.forEach(v => v.style.display = 'none');
+        document.getElementById(`view-${target}`).style.display = 'block';
+        
+        if(target === 'saved') loadSaved();
+      });
+    });
+
+    const createCardHtml = (p) => `
+      <div class="prof-card">
+        <div class="prof-img-wrap" style="padding-top: 100%;">
+          <img src="${p.image}" alt="${p.name}" class="prof-img">
+        </div>
+        <div class="prof-info" style="padding: 16px;">
+          <h3 class="prof-name" style="font-size: 18px;">${p.name}</h3>
+          <span class="prof-title" style="font-size: 11px;">${p.title}</span>
+          <div class="prof-actions" style="margin-top: 16px;">
+            <button class="btn btn-outline btn-save" data-id="${p.id}" style="width: 100%; font-size: 11px; padding: 8px;">SAVE</button>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Load Recommended
+    const recomGrid = document.getElementById('dash-recom-grid');
+    if(recomGrid) {
+      recomGrid.innerHTML = [professionals[0], professionals[1], professionals[2]].map(createCardHtml).join('');
+    }
+
+    // Load Saved
+    const loadSaved = () => {
+      const savedIds = JSON.parse(localStorage.getItem('savedProfs') || '[]');
+      const savedGrid = document.getElementById('dash-saved-grid');
+      const statCount = document.getElementById('stat-saved');
+      
+      if(statCount) statCount.innerText = savedIds.length;
+      
+      if(savedIds.length === 0) {
+        savedGrid.innerHTML = '<p style="grid-column: 1/-1; color: var(--text-secondary);">You have no saved professionals yet.</p>';
+      } else {
+        const savedProfs = professionals.filter(p => savedIds.includes(p.id));
+        savedGrid.innerHTML = savedProfs.map(createCardHtml).join('');
+      }
+      
+      // Reattach save btn logic
+      document.querySelectorAll('.btn-save').forEach(btn => {
+        const id = btn.getAttribute('data-id');
+        const saved = JSON.parse(localStorage.getItem('savedProfs') || '[]');
+        if (saved.includes(id)) {
+          btn.innerText = 'SAVED';
+          btn.classList.add('btn-accent');
+        } else {
+          btn.innerText = 'SAVE';
+          btn.classList.remove('btn-accent');
+        }
+        
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          let currentSaved = JSON.parse(localStorage.getItem('savedProfs') || '[]');
+          if (currentSaved.includes(id)) {
+            currentSaved = currentSaved.filter(pid => pid !== id);
+          } else {
+            currentSaved.push(id);
+          }
+          localStorage.setItem('savedProfs', JSON.stringify(currentSaved));
+          
+          if(document.getElementById('view-saved').style.display !== 'none') {
+            loadSaved(); // refresh if on saved view
+          } else {
+            // just update button
+            if (currentSaved.includes(id)) {
+              btn.innerText = 'SAVED';
+              btn.classList.add('btn-accent');
+            } else {
+              btn.innerText = 'SAVE';
+              btn.classList.remove('btn-accent');
+            }
+            if(statCount) statCount.innerText = currentSaved.length;
+          }
+        });
+      });
+    };
+    
+    // Initial load
+    loadSaved();
+
+    // Submit form logic
+    document.getElementById('submit-listing-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      btn.innerText = 'SUBMITTING...';
+      setTimeout(() => {
+        document.getElementById('submit-msg').style.display = 'block';
+        btn.innerText = 'SUBMIT FOR REVIEW';
+        e.target.reset();
+        
+        // Let's pretend it goes to admin by saving a flag in localStorage
+        localStorage.setItem('newListingPending', 'true');
+      }, 1500);
+    });
+
+    // Mobile Hamburger Menu for Dashboard
+    const dashHamburger = document.querySelector('.dash-hamburger');
+    const dashSidebar = document.querySelector('.dashboard-sidebar');
+    if (dashHamburger && dashSidebar) {
+      dashHamburger.addEventListener('click', () => {
+        dashSidebar.classList.toggle('open');
+      });
+      // Close sidebar when clicking a link on mobile
+      const dashNavLinks = dashSidebar.querySelectorAll('.sidebar-nav a');
+      dashNavLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if(window.innerWidth <= 768) {
+            dashSidebar.classList.remove('open');
+          }
+        });
+      });
+    }
+  </script>
+  <!-- Scroll to Top Button -->
+  <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+</body>
+</html>

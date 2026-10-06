@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Fine & Time</title>
+  <meta name="description" content="Admin management interface for Fine & Time directory.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar" style="background: #111; border-bottom: 1px solid #333;">
+    <div class="container nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="logo" style="color: #fff;">
+  <img src="logo.png" alt="Fine Jewelry & Watches Directory" class="brand-logo-img">
+  <div class="logo-text">
+    <span class="logo-title">FINE & TIME</span>
+    <span class="logo-desc">Professional Directory</span>
+  </div>
+</a>
+      </div>
+      <div class="nav-right" style="color: #fff;">
+        <span style="font-size: 13px; font-weight: 500; text-transform: uppercase;">System Administrator</span>
+        <a href="index.html" class="btn btn-outline" style="border-color: #555; color: #fff; padding: 8px 16px; font-size: 11px;">EXIT ADMIN</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Dashboard Layout -->
+  <div class="dashboard-layout" style="background: #f5f5f5;">
+    <aside class="dashboard-sidebar" style="background: #fff;">
+      <div class="sidebar-nav" id="admin-nav">
+        <a href="#" data-target="overview" class="active">Overview</a>
+        <a href="#" data-target="professionals">Professionals</a>
+        <a href="#" data-target="listings">Listings <span style="background: var(--accent-color); color: #fff; padding: 2px 6px; border-radius: 10px; font-size: 10px; margin-left: 8px;" id="pending-badge">1</span></a>
+        <a href="#" data-target="verification">Verification</a>
+        <a href="#" data-target="users">Users</a>
+        <a href="#" data-target="reviews">Reviews</a>
+        <a href="#" data-target="enquiries">Enquiries</a>
+        <a href="#" data-target="categories">Categories</a>
+        <a href="#" data-target="reports">Reports</a>
+        <a href="#" data-target="settings">Settings</a>
+      </div>
+    </aside>
+    
+    <main class="dashboard-main dash-main">
+      <div style="margin-bottom: 24px; padding: 12px; background: #fff3e0; border-left: 4px solid #ff9800; color: #e65100; font-size: 13px;">
+        <strong>NOTE:</strong> This is a frontend demonstration of the admin interface. Data is mocked and actions simulate backend processing using JavaScript.
+      </div>
+      
+      <!-- OVERVIEW -->
+      <div id="view-overview" class="dash-view">
+        <div class="dash-header">
+          <h2>Platform Overview</h2>
+        </div>
+        
+        <div class="dash-grid" style="grid-template-columns: repeat(4, 1fr);">
+          <div class="dash-card">
+            <h4>Total Professionals</h4>
+            <div class="dash-value">842</div>
+          </div>
+          <div class="dash-card">
+            <h4>Verified Pros</h4>
+            <div class="dash-value" style="color: #2e7d32;">512</div>
+          </div>
+          <div class="dash-card">
+            <h4>Pending Listings</h4>
+            <div class="dash-value" id="overview-pending-val" style="color: #f57c00;">4</div>
+          </div>
+          <div class="dash-card">
+            <h4>Registered Users</h4>
+            <div class="dash-value">12,450</div>
+          </div>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 40px;">
+          <!-- Recent Activity -->
+          <div style="background: #fff; border: 1px solid var(--border-color); padding: 24px;">
+            <h3 style="margin-bottom: 16px; font-size: 18px;">Recent Enquiries</h3>
+            <div style="border-bottom: 1px solid #eee; padding-bottom: 12px; margin-bottom: 12px;">
+              <p style="font-size: 14px; font-weight: 500;">Rolex Daytona Servicing</p>
+              <p style="font-size: 12px; color: #666;">To: Marcus Bennett | 2 mins ago</p>
+            </div>
+            <div style="border-bottom: 1px solid #eee; padding-bottom: 12px; margin-bottom: 12px;">
+              <p style="font-size: 14px; font-weight: 500;">Custom Engagement Ring Design</p>
+              <p style="font-size: 12px; color: #666;">To: Isabella Hart | 1 hour ago</p>
+            </div>
+            <div>
+              <p style="font-size: 14px; font-weight: 500;">Vintage Cartier Authentication</p>
+              <p style="font-size: 12px; color: #666;">General Enquiry | 3 hours ago</p>
+            </div>
+          </div>
+          
+          <!-- Reviews Awaiting Moderation -->
+          <div style="background: #fff; border: 1px solid var(--border-color); padding: 24px;">
+            <h3 style="margin-bottom: 16px; font-size: 18px;">Reviews Awaiting Moderation</h3>
+            <div style="background: #f9f9f9; padding: 12px; margin-bottom: 12px; border: 1px solid #eee;">
+              <div style="display: flex; justify-content: space-between; margin-bottom: 4px;">
+                <span style="font-weight: 500; font-size: 14px;">Review for Sofia Romano</span>
+                <span style="color: #d32f2f; font-size: 12px;">Reported</span>
+              </div>
+              <p style="font-size: 13px; color: #555; margin-bottom: 8px;">"The appraisal took longer than expected..."</p>
+              <div style="display: flex; gap: 8px;">
+                <button class="btn btn-outline" style="padding: 4px 8px; font-size: 10px;">APPROVE</button>
+                <button class="btn btn-primary" style="padding: 4px 8px; font-size: 10px; background: #d32f2f; border-color: #d32f2f;">REJECT</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LISTINGS (Pending Approvals) -->
+      <div id="view-listings" class="dash-view" style="display: none;">
+        <div class="dash-header">
+          <h2>Pending Listing Approvals</h2>
+          <p style="color: var(--text-secondary);">Review new professional submissions.</p>
+        </div>
+        
+        <div id="listings-container">
+          <!-- Populated if there is a pending listing in localStorage -->
+          <div id="empty-listings" style="padding: 40px; text-align: center; background: #fff; border: 1px dashed #ccc; color: #666;">
+            No new listings to review.
+          </div>
+          
+          <div id="mock-listing" style="background: #fff; border: 1px solid var(--border-color); padding: 24px; margin-bottom: 24px; display: none;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+              <div>
+                <h3 style="font-size: 20px; margin-bottom: 4px;">New User Submission</h3>
+                <p style="font-size: 13px; color: var(--accent-color); margin-bottom: 12px;">Submitted: Just now</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; font-size: 14px; margin-bottom: 24px;">
+                  <div>
+                    <strong>Type:</strong> Jewelry Designer<br>
+                    <strong>Location:</strong> Paris, France<br>
+                    <strong>Experience:</strong> 10 Years
+                  </div>
+                  <div>
+                    <strong>Email:</strong> contact@example.com<br>
+                    <strong>Website:</strong> https://example.com<br>
+                    <strong>Credentials:</strong> GIA
+                  </div>
+                </div>
+                <p style="font-size: 14px; color: #555;">Description: Independent designer focusing on sustainable materials.</p>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 8px;">
+                <button class="btn btn-primary" id="btn-approve-listing" style="background: #2e7d32; border-color: #2e7d32;">APPROVE LISTING</button>
+                <button class="btn btn-outline" id="btn-reject-listing" style="color: #d32f2f; border-color: #d32f2f;">REJECT</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- PROFESSIONALS -->
+      <div id="view-professionals" class="dash-view" style="display: none;">
+        <div class="dash-header" style="display: flex; justify-content: space-between; align-items: center;">
+          <div>
+            <h2>Manage Professionals</h2>
+            <p style="color: var(--text-secondary);">View, edit, or suspend active professional accounts.</p>
+          </div>
+          <div style="display: flex; gap: 12px;">
+            <input type="text" class="form-control" placeholder="Search..." style="padding: 8px 12px;">
+            <button class="btn btn-primary" style="padding: 8px 16px;">FILTER</button>
+          </div>
+        </div>
+        
+        <div style="background: #fff; border: 1px solid var(--border-color); overflow: hidden;">
+          <table style="width: 100%; border-collapse: collapse; text-align: left;">
+            <thead style="background: #f9f9f9; border-bottom: 1px solid var(--border-color);">
+              <tr>
+                <th style="padding: 16px; font-size: 12px; text-transform: uppercase;">Name</th>
+                <th style="padding: 16px; font-size: 12px; text-transform: uppercase;">Category</th>
+                <th style="padding: 16px; font-size: 12px; text-transform: uppercase;">Status</th>
+                <th style="padding: 16px; font-size: 12px; text-transform: uppercase;">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding: 16px;">
+                  <div style="font-weight: 500;">Isabella Hart</div>
+                  <div style="font-size: 12px; color: #666;">isabella@example.com</div>
+                </td>
+                <td style="padding: 16px; font-size: 14px;">Fine Jewelry</td>
+                <td style="padding: 16px;"><span style="background: #e8f5e9; color: #2e7d32; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">ACTIVE / VERIFIED</span></td>
+                <td style="padding: 16px;">
+                  <button class="btn btn-outline" style="padding: 6px 12px; font-size: 11px;">EDIT</button>
+                  <button class="btn btn-outline suspend-btn" style="padding: 6px 12px; font-size: 11px; color: #d32f2f; border-color: #d32f2f;">SUSPEND</button>
+                </td>
+              </tr>
+              <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding: 16px;">
+                  <div style="font-weight: 500;">Marcus Bennett</div>
+                  <div style="font-size: 12px; color: #666;">marcus@example.com</div>
+                </td>
+                <td style="padding: 16px; font-size: 14px;">Watchmaker</td>
+                <td style="padding: 16px;"><span style="background: #e8f5e9; color: #2e7d32; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">ACTIVE / VERIFIED</span></td>
+                <td style="padding: 16px;">
+                  <button class="btn btn-outline" style="padding: 6px 12px; font-size: 11px;">EDIT</button>
+                  <button class="btn btn-outline suspend-btn" style="padding: 6px 12px; font-size: 11px; color: #d32f2f; border-color: #d32f2f;">SUSPEND</button>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 16px;">
+                  <div style="font-weight: 500;">Antoine Lefevre</div>
+                  <div style="font-size: 12px; color: #666;">antoine@example.com</div>
+                </td>
+                <td style="padding: 16px; font-size: 14px;">Watchmaker</td>
+                <td style="padding: 16px;"><span style="background: #f5f5f5; color: #666; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">UNVERIFIED</span></td>
+                <td style="padding: 16px;">
+                  <button class="btn btn-outline" style="padding: 6px 12px; font-size: 11px;">EDIT</button>
+                  <button class="btn btn-outline suspend-btn" style="padding: 6px 12px; font-size: 11px; color: #d32f2f; border-color: #d32f2f;">SUSPEND</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <!-- Other Placeholder Views -->
+      <div id="view-verification" class="dash-view" style="display: none;">
+        <div class="dash-header"><h2>Verification Center</h2><p>Review documents and credentials submitted for 'Verified' badge.</p></div>
+        <p style="color: var(--text-secondary);">Functionality available in full platform.</p>
+      </div>
+      
+      <div id="view-users" class="dash-view" style="display: none;">
+        <div class="dash-header"><h2>User Management</h2><p>Manage standard user accounts.</p></div>
+        <p style="color: var(--text-secondary);">Functionality available in full platform.</p>
+      </div>
+      
+      <div id="view-reviews" class="dash-view" style="display: none;">
+        <div class="dash-header"><h2>Review Moderation</h2><p>Approve, reject, or hide reviews across the platform.</p></div>
+        <p style="color: var(--text-secondary);">Functionality available in full platform.</p>
+      </div>
+      
+      <div id="view-enquiries" class="dash-view" style="display: none;">
+        <div class="dash-header"><h2>System Enquiries</h2><p>Monitor platform-wide enquiry volume and general contact requests.</p></div>
+        <p style="color: var(--text-secondary);">Functionality available in full platform.</p>
+      </div>
+
+      <div id="view-categories" class="dash-view" style="display: none;">
+        <div class="dash-header"><h2>Categories & Services</h2><p>Manage the taxonomy of the directory.</p></div>
+        <p style="color: var(--text-secondary);">Functionality available in full platform.</p>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Nav Logic
+    const navLinks = document.querySelectorAll('#admin-nav a[data-target]');
+    const views = document.querySelectorAll('.dash-view');
+    
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        
+        const target = link.getAttribute('data-target');
+        views.forEach(v => v.style.display = 'none');
+        document.getElementById(`view-${target}`).style.display = 'block';
+      });
+    });
+
+    // Mock Listing Approval Logic
+    const checkPendingListing = () => {
+      const hasPending = localStorage.getItem('newListingPending') === 'true';
+      if (hasPending) {
+        document.getElementById('empty-listings').style.display = 'none';
+        document.getElementById('mock-listing').style.display = 'block';
+        document.getElementById('pending-badge').innerText = '1';
+        document.getElementById('pending-badge').style.display = 'inline';
+        document.getElementById('overview-pending-val').innerText = '1';
+      } else {
+        document.getElementById('empty-listings').style.display = 'block';
+        document.getElementById('mock-listing').style.display = 'none';
+        document.getElementById('pending-badge').style.display = 'none';
+        document.getElementById('overview-pending-val').innerText = '0';
+      }
+    };
+    checkPendingListing();
+
+    document.getElementById('btn-approve-listing').addEventListener('click', function() {
+      this.innerText = 'APPROVED';
+      setTimeout(() => {
+        localStorage.removeItem('newListingPending');
+        checkPendingListing();
+        alert('Listing has been approved and added to the directory (Demo).');
+      }, 500);
+    });
+    
+    document.getElementById('btn-reject-listing').addEventListener('click', function() {
+      this.innerText = 'REJECTED';
+      setTimeout(() => {
+        localStorage.removeItem('newListingPending');
+        checkPendingListing();
+      }, 500);
+    });
+
+    // Suspend Demo
+    document.querySelectorAll('.suspend-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        if(this.innerText === 'SUSPEND') {
+          this.innerText = 'UNSUSPEND';
+          this.style.color = '#2e7d32';
+          this.style.borderColor = '#2e7d32';
+          const statusCell = this.parentElement.previousElementSibling;
+          statusCell.innerHTML = '<span style="background: #ffebee; color: #d32f2f; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">SUSPENDED</span>';
+        } else {
+          this.innerText = 'SUSPEND';
+          this.style.color = '#d32f2f';
+          this.style.borderColor = '#d32f2f';
+          const statusCell = this.parentElement.previousElementSibling;
+          statusCell.innerHTML = '<span style="background: #e8f5e9; color: #2e7d32; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 600;">ACTIVE</span>';
+        }
+      });
+    });
+  </script>
+  <!-- Scroll to Top Button -->
+  <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+</body>
+</html>

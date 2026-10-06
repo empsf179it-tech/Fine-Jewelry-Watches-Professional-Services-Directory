@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Jewelry & Watch Professionals | Fine & Time</title>
+  <meta name="description" content="Search trusted jewelry and watch professionals by expertise, service and location.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="logo">
+  <img src="logo.png" alt="Fine Jewelry & Watches Directory" class="brand-logo-img">
+  <div class="logo-text">
+    <span class="logo-title">FINE & TIME</span>
+    <span class="logo-desc">Professional Directory</span>
+  </div>
+</a>
+      </div>
+      
+      <div class="nav-center">
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="professionals.html" class="active">Professionals</a>
+          <a href="contact.html">Contact</a>
+          <a href="dashboard.html">Dashboard</a>
+        </div>
+      </div>
+      
+      <div class="nav-right">
+        <button class="nav-icon theme-toggle" aria-label="Toggle Theme">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+        <a href="login.html" class="btn btn-primary d-none-mobile">LOGIN</a>
+        
+        <button class="hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="nav-drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="logo">
+  <img src="logo.png" alt="Fine Jewelry & Watches Directory" class="brand-logo-img">
+  <div class="logo-text">
+    <span class="logo-title">FINE & TIME</span>
+    <span class="logo-desc">Professional Directory</span>
+  </div>
+</a>
+      <button class="close-drawer">&times;</button>
+    </div>
+    <div class="drawer-links" style="align-items: center; text-align: center;">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="professionals.html" class="active">Professionals</a>
+      <a href="contact.html">Contact</a>
+      <a href="dashboard.html">Dashboard</a>
+      
+      <button class="nav-icon theme-toggle" aria-label="Toggle Theme" style="margin-top: 16px; background: none; border: none; color: var(--text-primary); cursor: pointer;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+      </button>
+    </div>
+    <div class="drawer-footer" style="display: flex; justify-content: center; width: 100%;">
+      <a href="login.html" class="btn btn-primary" style="width: 100%; max-width: 300px; text-align: center; justify-content: center;">LOGIN</a>
+    </div>
+  </div>
+  <div class="overlay"></div>
+
+  <!-- Global Search Overlay -->
+  <div class="search-overlay" id="search-overlay">
+    <div class="search-header">
+      <div class="logo">
+        <span class="logo-title">SEARCH</span>
+      </div>
+      <button class="modal-close">&times;</button>
+    </div>
+    <div class="search-input-wrap">
+      <input type="text" placeholder="Search jewelry specialists, watchmakers..." autofocus>
+    </div>
+    <div class="search-results">
+      <p style="color: var(--text-secondary); text-align: center;">Press Enter to search the directory.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 01: HERO (Search System) -->
+  <section class="page-hero" style="height: auto; padding: 160px 0 80px;">
+    <div class="page-hero-overlay"></div>
+    <div class="container" style="position: relative; z-index: 2;">
+      <h1>FIND YOUR SPECIALIST.</h1>
+      <p style="margin-bottom: 48px;">Search trusted jewelry and watch professionals by expertise, service and location.</p>
+      
+      <div style="background: var(--bg-primary); padding: 32px; max-width: 1000px; margin: 0 auto; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);">
+        <form class="hero-filter-form" id="search-form">
+          <div style="text-align: left;">
+            <label style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Search</label>
+            <input type="text" class="form-control" placeholder="Search professionals" id="search-kw" style="padding: 12px; font-size: 14px;">
+          </div>
+          <div style="text-align: left;">
+            <label style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Location</label>
+            <input type="text" class="form-control" placeholder="City / Region" id="search-loc" style="padding: 12px; font-size: 14px;">
+          </div>
+          <div style="text-align: left;">
+            <label style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Category</label>
+            <select class="form-control" id="search-cat" style="padding: 12px; font-size: 14px;">
+              <option value="all">All Categories</option>
+              <option value="jewelry">Jewelry</option>
+              <option value="watches">Watches</option>
+              <option value="gemology">Gemology</option>
+              <option value="appraisal">Appraisal</option>
+              <option value="repair">Repair</option>
+              <option value="custom">Custom Design</option>
+            </select>
+          </div>
+          <div style="text-align: left;">
+            <label style="display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px;">Verification</label>
+            <select class="form-control" id="search-ver" style="padding: 12px; font-size: 14px;">
+              <option value="all">All</option>
+              <option value="verified">Verified Only</option>
+            </select>
+          </div>
+          <button type="button" class="btn btn-primary" onclick="applyFilters()" style="padding: 12px 24px; height: 44.5px;">SEARCH</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 02: DIRECTORY RESULTS -->
+  <section class="section" style="padding-top: 0;">
+    <div class="container directory-layout">
+      
+      <!-- Filters Sidebar -->
+      <aside class="directory-filters">
+        <div class="filter-group">
+          <h4>Category</h4>
+          <label class="filter-label"><input type="checkbox" checked value="jewelry" class="cat-filter"> Jewelry Specialists</label>
+          <label class="filter-label"><input type="checkbox" checked value="watches" class="cat-filter"> Watch Specialists</label>
+          <label class="filter-label"><input type="checkbox" checked value="gemology" class="cat-filter"> Gemologists</label>
+          <label class="filter-label"><input type="checkbox" checked value="appraisal" class="cat-filter"> Appraisers</label>
+          <label class="filter-label"><input type="checkbox" checked value="repair" class="cat-filter"> Repair Services</label>
+          <label class="filter-label"><input type="checkbox" checked value="custom" class="cat-filter"> Custom Design</label>
+        </div>
+        
+        <div class="filter-group">
+          <h4>Rating</h4>
+          <label class="filter-label"><input type="radio" name="rating" value="any" checked onchange="applyFilters()"> Any Rating</label>
+          <label class="filter-label"><input type="radio" name="rating" value="4.0" onchange="applyFilters()"> 4.0 & Up</label>
+          <label class="filter-label"><input type="radio" name="rating" value="4.5" onchange="applyFilters()"> 4.5 & Up</label>
+        </div>
+        
+        <div class="filter-group">
+          <h4>Availability</h4>
+          <label class="filter-label"><input type="radio" name="avail" checked value="all"> All Professionals</label>
+          <label class="filter-label"><input type="radio" name="avail" value="available"> Available Now</label>
+        </div>
+      </aside>
+      
+      <!-- Results Area -->
+      <div class="directory-results">
+        <div class="results-header">
+          <div style="font-size: 14px; color: var(--text-secondary);"><span id="result-count">8</span> Professionals Found</div>
+          <div>
+            <select class="form-control" style="padding: 8px 12px; width: auto; font-size: 13px;" onchange="sortResults(this.value)">
+              <option value="recommended">Recommended</option>
+              <option value="highest">Highest Rated</option>
+              <option value="most">Most Reviewed</option>
+              <option value="recent">Recently Added</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="results-grid" id="professionals-grid">
+          <!-- Profiles generated by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 02: VERIFICATION PROCESS -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <h2>OUR VERIFICATION PROCESS</h2>
+        <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto;">We ensure that every specialist in our directory meets our stringent standards for luxury craftsmanship and exceptional service.</p>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service-card" style="text-align: center;">
+          <div style="width: 72px; height: 72px; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; color: var(--accent-color);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+          </div>
+          <h3 style="font-size: 20px; margin-bottom: 16px;">Credentials Reviewed</h3>
+          <p style="color: var(--text-secondary); font-size: 15px;">We thoroughly examine certifications, educational backgrounds, and professional affiliations.</p>
+        </div>
+        
+        <div class="service-card" style="text-align: center;">
+          <div style="width: 72px; height: 72px; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; color: var(--accent-color);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+          </div>
+          <h3 style="font-size: 20px; margin-bottom: 16px;">Background Checked</h3>
+          <p style="color: var(--text-secondary); font-size: 15px;">Each specialist's business history and industry reputation is independently verified.</p>
+        </div>
+        
+        <div class="service-card" style="text-align: center;">
+          <div style="width: 72px; height: 72px; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; color: var(--accent-color);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+          </div>
+          <h3 style="font-size: 20px; margin-bottom: 16px;">Quality Assured</h3>
+          <p style="color: var(--text-secondary); font-size: 15px;">We monitor client feedback and reviews to ensure ongoing adherence to our luxury standards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 03: PROFESSIONAL CTA -->
+  <section class="final-cta">
+    <div class="final-cta-bg" style="background-image: url('images/image-28.png');"></div>
+    <div class="final-cta-overlay"></div>
+    <div class="container final-cta-content">
+      <h2>ARE YOU A PROFESSIONAL?</h2>
+      <p>Join our exclusive network of vetted fine jewelry and luxury watch specialists to reach a discerning global clientele.</p>
+      <div class="final-cta-actions">
+        <a href="register.html" class="btn btn-accent">SUBMIT YOUR LISTING</a>
+        <a href="contact.html" class="btn btn-outline">CONTACT US</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <!-- ... same footer content ... -->
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+            <img src="logo.png" alt="Fine Jewelry & Watches Directory" class="brand-logo-img">
+            <div class="logo-text">
+              <span class="logo-title">FINE & TIME</span>
+              <span class="logo-desc">Professional Directory</span>
+            </div>
+          </a>
+          <p>The premier destination for discovering trusted fine jewelry and luxury watch professionals globally.</p>
+          <div class="social-icons" style="margin-top: 24px;">
+            <a href="#" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" aria-label="X">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="4" x2="20" y2="20"></line><line x1="20" y1="4" x2="4" y2="20"></line></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="professionals.html">Professionals</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Professional</h4>
+          <ul>
+            <li><a href="register.html">Submit Listing</a></li>
+            <li><a href="#">Verification</a></li>
+            <li><a href="professionals.html">Directory</a></li>
+            <li><a href="dashboard.html">Enquiries</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="copyright">
+          © 2026 Fine & Time. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global Enquiry Popup -->
+  <div class="modal-overlay" id="enquiry-modal">
+    <!-- ... same modal content ... -->
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div class="modal-header">
+        <h2>LET'S FIND THE RIGHT PROFESSIONAL</h2>
+        <p>Submit your details and we will connect you with a verified specialist.</p>
+      </div>
+      <form id="enquiry-form">
+        <!-- Form Fields -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" class="form-control" required placeholder="John Doe">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" required placeholder="john@example.com">
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" class="form-control" placeholder="+1 (555) 000-0000">
+          </div>
+          <div class="form-group">
+            <label>Service Type</label>
+            <select class="form-control" required>
+              <option value="" disabled selected>Select a Service</option>
+              <option value="fine-jewelry">Fine Jewelry</option>
+              <option value="luxury-watches">Luxury Watches</option>
+              <option value="jewelry-repair">Jewelry Repair</option>
+              <option value="watch-repair">Watch Repair</option>
+              <option value="custom-jewelry">Custom Jewelry</option>
+              <option value="gemology">Gemology</option>
+              <option value="appraisal">Appraisal</option>
+              <option value="authentication">Authentication</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-group">
+            <label>Preferred Location</label>
+            <input type="text" class="form-control" placeholder="City or Region">
+          </div>
+          <div class="form-group">
+            <label>Preferred Date</label>
+            <input type="date" class="form-control">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Specific Professional / Service (Optional)</label>
+          <input type="text" class="form-control" placeholder="Name of specialist or detailed service" id="enquiry-spec">
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea class="form-control" required placeholder="Describe what you are looking for..."></textarea>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-outline btn-cancel">CANCEL</button>
+          <button type="submit" class="btn btn-primary">SEND ENQUIRY</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Professional Profile Modal (Dynamic) -->
+  <div class="modal-overlay" id="profile-modal">
+    <div class="modal-content profile-modal">
+      <button class="modal-close">&times;</button>
+      <div class="profile-header">
+        <img src="" alt="Profile" class="profile-img-large" id="prof-modal-img">
+        <div class="profile-header-info">
+          <div class="badge-verified" style="position: static; display: inline-flex; margin-bottom: 16px;" id="prof-modal-badge">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg> Verified Professional
+          </div>
+          <h2 id="prof-modal-name">Name</h2>
+          <p style="color: var(--accent-color); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;" id="prof-modal-title">Title</p>
+          <div style="display: flex; gap: 24px; color: var(--text-secondary); margin-bottom: 24px; flex-wrap: wrap;">
+            <span id="prof-modal-loc">📍 Location</span>
+            <span id="prof-modal-rating">⭐ Rating</span>
+            <span id="prof-modal-exp">Exp</span>
+          </div>
+          <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+            <button class="btn btn-primary" onclick="openEnquiryForProf()">CONTACT PROFESSIONAL</button>
+            <button class="btn btn-outline btn-save" id="prof-modal-save">SAVE PROFILE</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="profile-tabs">
+        <button class="profile-tab active">About</button>
+        <button class="profile-tab">Expertise</button>
+        <button class="profile-tab">Reviews</button>
+      </div>
+      
+      <div class="profile-tab-content" style="padding-top: 16px;">
+        <h4 style="margin-bottom: 16px; font-size: 20px;">About the Professional</h4>
+        <p style="color: var(--text-secondary); margin-bottom: 24px;" id="prof-modal-desc">Description goes here.</p>
+        
+        <h4 style="margin-bottom: 16px; font-size: 20px;">Services</h4>
+        <ul style="display: flex; flex-wrap: wrap; gap: 12px; color: var(--text-secondary); list-style: none;" id="prof-modal-services">
+          <!-- services tags -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    // Demo Data
+    const professionals = [
+      {
+        id: 'p1',
+        name: 'Isabella Hart',
+        title: 'Fine Jewelry Designer',
+        category: 'jewelry',
+        specialty: 'custom',
+        location: 'New York, USA',
+        rating: 4.9,
+        reviews: 142,
+        verified: true,
+        experience: '18 Years',
+        image: 'images/image-12.png',
+        desc: 'Isabella specializes in creating unique, narrative-driven bespoke jewelry. She excels at translating personal stories into heirloom-quality rings and necklaces.',
+        services: ['Custom Jewelry', 'Bridal', 'Gemstones', 'Redesign']
+      },
+      {
+        id: 'p2',
+        name: 'Marcus Bennett',
+        title: 'Luxury Watchmaker',
+        category: 'watches',
+        specialty: 'repair',
+        location: 'London, UK',
+        rating: 5.0,
+        reviews: 85,
+        verified: true,
+        experience: '20 Years',
+        image: 'images/image-19.png',
+        desc: 'Expert restoration and servicing of vintage Swiss mechanical timepieces. Certified by major Swiss houses for comprehensive overhauls.',
+        services: ['Movement Servicing', 'Polishing', 'Vintage Restoration', 'Authentication']
+      },
+      {
+        id: 'p3',
+        name: 'Sofia Romano',
+        title: 'Gemologist & Appraiser',
+        category: 'gemology',
+        specialty: 'appraisal',
+        location: 'Milan, Italy',
+        rating: 4.8,
+        reviews: 64,
+        verified: true,
+        experience: '12 Years',
+        image: 'images/image-16.png',
+        desc: 'GIA certified gemologist offering detailed laboratory reports, color grading, and formal valuation services for insurance and estate purposes.',
+        services: ['Gem Identification', 'Diamond Grading', 'Insurance Appraisal', 'Consultation']
+      },
+      {
+        id: 'p4',
+        name: 'Daniel Mercer',
+        title: 'Fine Jewelry Specialist',
+        category: 'jewelry',
+        specialty: 'estate',
+        location: 'New York, USA',
+        rating: 4.9,
+        reviews: 210,
+        verified: true,
+        experience: '25 Years',
+        image: 'images/image-34.png',
+        desc: 'Consultation on high-end estate jewelry acquisition and rare gemstone sourcing. Deep expertise in Art Deco and Edwardian periods.',
+        services: ['Estate Jewelry', 'Sourcing', 'Authentication', 'Investment Consultation']
+      },
+      {
+        id: 'p5',
+        name: 'Antoine Lefevre',
+        title: 'Master Watchmaker',
+        category: 'watches',
+        specialty: 'repair',
+        location: 'Geneva, Switzerland',
+        rating: 4.7,
+        reviews: 95,
+        verified: false,
+        experience: '30 Years',
+        image: 'images/image-1.png',
+        desc: 'Independent master watchmaker focusing on complex complications, tourbillons, and minute repeaters.',
+        services: ['Complication Repair', 'Custom Parts Fabrication', 'Water Resistance Testing']
+      },
+      {
+        id: 'p6',
+        name: 'Clara Hughes',
+        title: 'Antique Jewelry Restorer',
+        category: 'jewelry',
+        specialty: 'repair',
+        location: 'Boston, USA',
+        rating: 4.6,
+        reviews: 112,
+        verified: true,
+        experience: '15 Years',
+        image: 'images/image-2.png',
+        desc: 'Dedicated to the careful, period-accurate restoration of Victorian and Edwardian jewelry, preserving historical integrity.',
+        services: ['Laser Soldering', 'Prong Retipping', 'Enamel Repair', 'Stone Matching']
+      }
+    ];
+
+    let currentProfName = '';
+
+    const renderGrid = (data) => {
+      const grid = document.getElementById('professionals-grid');
+      grid.innerHTML = '';
+      
+      if(data.length === 0) {
+        grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: var(--text-secondary);">NO MATCHING PROFESSIONALS FOUND</div>';
+        document.getElementById('result-count').innerText = '0';
+        return;
+      }
+      
+      document.getElementById('result-count').innerText = data.length;
+      
+      data.forEach(p => {
+        const servicesHtml = p.services.slice(0,3).join(' &middot; ');
+        
+        const card = document.createElement('div');
+        card.className = 'prof-card';
+        card.innerHTML = `
+          <div class="prof-img-wrap">
+            <img src="${p.image}" alt="${p.name}" class="prof-img">
+            ${p.verified ? `<div class="badge-verified"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg> Verified</div>` : ''}
+          </div>
+          <div class="prof-info">
+            <h3 class="prof-name">${p.name}</h3>
+            <span class="prof-title">${p.title}</span>
+            <div class="prof-meta">
+              <span>📍 ${p.location.split(',')[0]}</span>
+              <span>⭐ ${p.rating}</span>
+            </div>
+            <p class="prof-desc" style="font-size: 12px; margin-bottom: 12px; color: var(--accent-color);">${servicesHtml}</p>
+            <p class="prof-desc">${p.desc.substring(0, 80)}...</p>
+            <div class="prof-actions">
+              <button class="btn btn-outline btn-save" data-id="${p.id}">SAVE</button>
+              <button class="btn btn-primary" onclick='openProfile(${JSON.stringify(p).replace(/'/g, "&#39;")})'>VIEW</button>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+      
+      // Re-attach save listeners
+      const updateSavedState = () => {
+        const saved = JSON.parse(localStorage.getItem('savedProfs') || '[]');
+        document.querySelectorAll('.btn-save').forEach(btn => {
+          const id = btn.getAttribute('data-id');
+          if (saved.includes(id)) {
+            btn.innerText = 'SAVED';
+            btn.classList.add('btn-accent');
+          } else {
+            btn.innerText = 'SAVE';
+            btn.classList.remove('btn-accent');
+          }
+        });
+      };
+      
+      document.querySelectorAll('.btn-save').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const id = btn.getAttribute('data-id');
+          if(!id) return;
+          let saved = JSON.parse(localStorage.getItem('savedProfs') || '[]');
+          if (saved.includes(id)) {
+            saved = saved.filter(pid => pid !== id);
+          } else {
+            saved.push(id);
+          }
+          localStorage.setItem('savedProfs', JSON.stringify(saved));
+          updateSavedState();
+        });
+      });
+      updateSavedState();
+    };
+
+    const applyFilters = () => {
+      let filtered = professionals;
+      
+      // Search
+      const kw = document.getElementById('search-kw').value.toLowerCase();
+      const loc = document.getElementById('search-loc').value.toLowerCase();
+      const cat = document.getElementById('search-cat').value;
+      const ver = document.getElementById('search-ver').value;
+      
+      if(kw) filtered = filtered.filter(p => p.name.toLowerCase().includes(kw) || p.services.some(s => s.toLowerCase().includes(kw)));
+      if(loc) filtered = filtered.filter(p => p.location.toLowerCase().includes(loc));
+      if(cat !== 'all') filtered = filtered.filter(p => p.category === cat || p.specialty === cat);
+      if(ver === 'verified') filtered = filtered.filter(p => p.verified);
+      
+      // Sidebar rating
+      const ratingInput = document.querySelector('input[name="rating"]:checked');
+      if(ratingInput && ratingInput.value !== 'any') {
+        filtered = filtered.filter(p => p.rating >= parseFloat(ratingInput.value));
+      }
+      
+      // Sidebar categories (checkboxes)
+      const checkedCats = Array.from(document.querySelectorAll('.cat-filter:checked')).map(cb => cb.value);
+      if(checkedCats.length > 0) {
+        filtered = filtered.filter(p => checkedCats.includes(p.category) || checkedCats.includes(p.specialty));
+      } else {
+        filtered = []; // If nothing checked, show none
+      }
+
+      renderGrid(filtered);
+    };
+
+    const sortResults = (type) => {
+      let sorted = [...professionals];
+      if (type === 'highest') sorted.sort((a,b) => b.rating - a.rating);
+      if (type === 'most') sorted.sort((a,b) => b.reviews - a.reviews);
+      renderGrid(sorted);
+    };
+
+    // Initialize checkboxes to trigger filter
+    document.querySelectorAll('.cat-filter').forEach(cb => {
+      cb.addEventListener('change', applyFilters);
+    });
+
+    window.openProfile = (prof) => {
+      currentProfName = prof.name;
+      document.getElementById('prof-modal-img').src = prof.image;
+      document.getElementById('prof-modal-name').innerText = prof.name;
+      document.getElementById('prof-modal-title').innerText = prof.title;
+      document.getElementById('prof-modal-loc').innerText = '📍 ' + prof.location;
+      document.getElementById('prof-modal-rating').innerText = `⭐ ${prof.rating} (${prof.reviews} Reviews)`;
+      document.getElementById('prof-modal-exp').innerText = prof.experience;
+      document.getElementById('prof-modal-desc').innerText = prof.desc;
+      
+      const badge = document.getElementById('prof-modal-badge');
+      badge.style.display = prof.verified ? 'inline-flex' : 'none';
+      
+      const servicesList = document.getElementById('prof-modal-services');
+      servicesList.innerHTML = prof.services.map(s => `<li style="padding: 6px 12px; background: var(--bg-secondary); border: 1px solid var(--border-color); font-size: 13px;">${s}</li>`).join('');
+      
+      const saveBtn = document.getElementById('prof-modal-save');
+      saveBtn.setAttribute('data-id', prof.id);
+      const saved = JSON.parse(localStorage.getItem('savedProfs') || '[]');
+      if(saved.includes(prof.id)) {
+        saveBtn.innerText = 'SAVED';
+        saveBtn.classList.add('btn-accent');
+      } else {
+        saveBtn.innerText = 'SAVE PROFILE';
+        saveBtn.classList.remove('btn-accent');
+      }
+      
+      const modal = document.getElementById('profile-modal');
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    };
+
+    window.openEnquiryForProf = () => {
+      document.getElementById('profile-modal').classList.remove('active');
+      const enquiryModal = document.getElementById('enquiry-modal');
+      const specInput = document.getElementById('enquiry-spec');
+      if (specInput && currentProfName) {
+        specInput.value = `Enquiry for ${currentProfName}`;
+      }
+      enquiryModal.classList.add('active');
+    };
+
+    // Parse URL params for pre-filtering (if arriving from services page)
+    const urlParams = new URLSearchParams(window.location.search);
+    const serviceParam = urlParams.get('service');
+    if (serviceParam) {
+      document.getElementById('search-kw').value = serviceParam.replace('-', ' ');
+    }
+
+    renderGrid(professionals);
+  </script>
+  <!-- Scroll to Top Button -->
+  <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+</body>
+</html>

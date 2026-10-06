@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fine & Time | Fine Jewelry & Watch Professionals</title>
+  <meta name="description" content="Discover trusted jewelry and watch professionals, specialists and services in one refined directory.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <div class="nav-left">
+        <a href="index.html" class="logo">
+  <img src="logo.png" alt="Fine Jewelry & Watches Directory" class="brand-logo-img">
+  <div class="logo-text">
+    <span class="logo-title">FINE & TIME</span>
+    <span class="logo-desc">Professional Directory</span>
+  </div>
+</a>
+      </div>
+      
+      <div class="nav-center">
+        <div class="nav-links">
+          <a href="index.html" class="active">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="professionals.html">Professionals</a>
+          <a href="contact.html">Contact</a>
+          <a href="dashboard.html">Dashboard</a>
+        </div>
+      </div>
+      
+      <div class="nav-right">
+        <button class="nav-icon theme-toggle" aria-label="Toggle Theme">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+        <a href="login.html" class="btn btn-primary d-none-mobile">LOGIN</a>
+        
+        <button class="hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="nav-drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="logo">
+  <img src="logo.png" alt="Fine Jewelry & Watches Directory" class="brand-logo-img">
+  <div class="logo-text">
+    <span class="logo-title">FINE & TIME</span>
+    <span class="logo-desc">Professional Directory</span>
+  </div>
+</a>
+      <button class="close-drawer">&times;</button>
+    </div>
+    <div class="drawer-links" style="align-items: center; text-align: center;">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="professionals.html">Professionals</a>
+      <a href="contact.html">Contact</a>
+      <a href="dashboard.html">Dashboard</a>
+      
+      <button class="nav-icon theme-toggle" aria-label="Toggle Theme" style="margin-top: 16px; background: none; border: none; color: var(--text-primary); cursor: pointer;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+      </button>
+    </div>
+    <div class="drawer-footer" style="display: flex; justify-content: center; width: 100%;">
+      <a href="login.html" class="btn btn-primary" style="width: 100%; max-width: 300px; text-align: center; justify-content: center;">LOGIN</a>
+    </div>
+  </div>
+  <div class="overlay"></div>
+
+  <!-- Global Search Overlay -->
+  <div class="search-overlay" id="search-overlay">
+    <div class="search-header">
+      <div class="logo">
+        <span class="logo-title">SEARCH</span>
+      </div>
+      <button class="modal-close">&times;</button>
+    </div>
+    <div class="search-input-wrap">
+      <input type="text" placeholder="Search jewelry specialists, watchmakers..." autofocus>
+    </div>
+    <div class="search-results">
+      <!-- Frontend Demo: Will show results or empty state based on input -->
+      <p style="color: var(--text-secondary); text-align: center;">Press Enter to search the directory.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 01: LUXURY HERO -->
+  <section class="hero">
+    <div class="hero-bg" style="background-image: url('images/image-27.png');"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>FIND THE EXPERTS BEHIND TIMELESS CRAFT.</h1>
+      <p>Discover trusted jewelry and watch professionals, specialists and services in one refined directory.</p>
+      
+      <div class="hero-actions">
+        <a href="professionals.html" class="btn btn-accent">EXPLORE PROFESSIONALS</a>
+        <a href="services.html" class="btn btn-outline">FIND A SERVICE</a>
+      </div>
+      
+      <div class="hero-search">
+        <input type="text" placeholder="Search jewelry specialists, watchmakers, appraisers...">
+        <div class="hero-search-divider"></div>
+        <input type="text" placeholder="Enter location" class="location-input">
+        <button class="search-btn trigger-search">SEARCH</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 02: DISCOVER BY EXPERTISE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>DISCOVER BY EXPERTISE</h2>
+      </div>
+      <div class="discover-grid">
+        <div class="discover-item item-large" onclick="window.location.href='professionals.html'">
+          <img src="images/image-22.png" alt="Fine Jewelry" class="discover-img">
+          <div class="discover-overlay"></div>
+          <span class="discover-number">01</span>
+          <div class="discover-info">
+            <h3>Fine Jewelry Specialists</h3>
+            <div class="discover-hover-content">
+              <p>Connect with master designers and bespoke jewelers.</p>
+              <span class="btn btn-outline" style="margin-top: 16px; border-color: #fff; color: #fff;">EXPLORE</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="discover-item item-small" onclick="window.location.href='professionals.html'">
+          <img src="images/image-17.png" alt="Watch Repair" class="discover-img">
+          <div class="discover-overlay"></div>
+          <span class="discover-number">02</span>
+          <div class="discover-info">
+            <h3>Luxury Watchmakers</h3>
+            <div class="discover-hover-content">
+              <p>Servicing, restoration, and horological expertise.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="discover-item item-small" onclick="window.location.href='professionals.html'">
+          <img src="images/image-11.png" alt="Gemology" class="discover-img">
+          <div class="discover-overlay"></div>
+          <span class="discover-number">03</span>
+          <div class="discover-info">
+            <h3>Gemologists</h3>
+            <div class="discover-hover-content">
+              <p>Stone sourcing and identification.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="discover-item item-large" onclick="window.location.href='professionals.html'">
+          <img src="images/image-23.png" alt="Appraisal" class="discover-img">
+          <div class="discover-overlay"></div>
+          <span class="discover-number">04</span>
+          <div class="discover-info">
+            <h3>Valuation & Appraisal</h3>
+            <div class="discover-hover-content">
+              <p>Certified appraisals for insurance and estate purposes.</p>
+              <span class="btn btn-outline" style="margin-top: 16px; border-color: #fff; color: #fff;">EXPLORE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 03: VERIFIED PROFESSIONALS -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <h2>MEET VERIFIED SPECIALISTS</h2>
+      </div>
+      <div class="prof-grid">
+        <!-- Profile 1 -->
+        <div class="prof-card">
+          <div class="prof-img-wrap">
+            <img src="images/image-12.png" alt="Elena Laurent" class="prof-img">
+            <div class="badge-verified">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg> Verified
+            </div>
+          </div>
+          <div class="prof-info">
+            <h3 class="prof-name">Elena Laurent</h3>
+            <span class="prof-title">Master Jewelry Designer</span>
+            <div class="prof-meta">
+              <span>📍 Paris, France</span>
+              <span>⭐ 4.9 (120)</span>
+              <span>15y Exp</span>
+            </div>
+            <p class="prof-desc">Specializing in bespoke engagement rings and resetting heirloom diamonds with a modern aesthetic.</p>
+            <div class="prof-actions">
+              <button class="btn btn-outline btn-save" data-id="p1">SAVE</button>
+              <a href="#" class="btn btn-primary trigger-profile">VIEW PROFILE</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile 2 -->
+        <div class="prof-card">
+          <div class="prof-img-wrap">
+            <img src="images/image-19.png" alt="Marcus Bennett" class="prof-img">
+            <div class="badge-verified">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg> Verified
+            </div>
+          </div>
+          <div class="prof-info">
+            <h3 class="prof-name">Marcus Bennett</h3>
+            <span class="prof-title">Luxury Watchmaker</span>
+            <div class="prof-meta">
+              <span>📍 London, UK</span>
+              <span>⭐ 5.0 (85)</span>
+              <span>20y Exp</span>
+            </div>
+            <p class="prof-desc">Expert restoration and servicing of vintage Swiss mechanical timepieces.</p>
+            <div class="prof-actions">
+              <button class="btn btn-outline btn-save" data-id="p2">SAVE</button>
+              <a href="#" class="btn btn-primary trigger-profile">VIEW PROFILE</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile 3 -->
+        <div class="prof-card">
+          <div class="prof-img-wrap">
+            <img src="images/image-16.png" alt="Sofia Romano" class="prof-img">
+            <div class="badge-verified">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg> Verified
+            </div>
+          </div>
+          <div class="prof-info">
+            <h3 class="prof-name">Sofia Romano</h3>
+            <span class="prof-title">Gemologist & Appraiser</span>
+            <div class="prof-meta">
+              <span>📍 Milan, Italy</span>
+              <span>⭐ 4.8 (64)</span>
+              <span>12y Exp</span>
+            </div>
+            <p class="prof-desc">GIA certified gemologist offering detailed laboratory reports and valuation services.</p>
+            <div class="prof-actions">
+              <button class="btn btn-outline btn-save" data-id="p3">SAVE</button>
+              <a href="#" class="btn btn-primary trigger-profile">VIEW PROFILE</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Profile 4 -->
+        <div class="prof-card">
+          <div class="prof-img-wrap">
+            <img src="images/image-34.png" alt="Daniel Mercer" class="prof-img">
+            <div class="badge-verified">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg> Verified
+            </div>
+          </div>
+          <div class="prof-info">
+            <h3 class="prof-name">Daniel Mercer</h3>
+            <span class="prof-title">Fine Jewelry Specialist</span>
+            <div class="prof-meta">
+              <span>📍 New York, USA</span>
+              <span>⭐ 4.9 (210)</span>
+              <span>25y Exp</span>
+            </div>
+            <p class="prof-desc">Consultation on high-end estate jewelry acquisition and rare gemstone sourcing.</p>
+            <div class="prof-actions">
+              <button class="btn btn-outline btn-save" data-id="p4">SAVE</button>
+              <a href="#" class="btn btn-primary trigger-profile">VIEW PROFILE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 04: SERVICE DISCOVERY EXPERIENCE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>THE RIGHT SPECIALIST FOR EVERY DETAIL</h2>
+      </div>
+      <div class="service-explorer">
+        <div class="service-list">
+          <div class="service-item active" data-target="design">
+            <h3>Jewelry Design</h3>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+          <div class="service-item" data-target="watch">
+            <h3>Watch Servicing</h3>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+          <div class="service-item" data-target="valuation">
+            <h3>Valuation</h3>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+          <div class="service-item" data-target="restoration">
+            <h3>Restoration</h3>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+          <div style="margin-top: 48px;">
+            <a href="services.html" class="btn btn-outline">EXPLORE SERVICES</a>
+          </div>
+        </div>
+        <div class="service-display">
+          <img src="images/image-35.png" alt="Jewelry Design" id="img-design" class="active">
+          <div class="service-display-content active" id="content-design">
+            <h4>Bespoke Creation</h4>
+            <p>Connect with master craftspeople who can bring your unique vision to life with exceptional materials.</p>
+          </div>
+
+          <img src="images/image-36.png" alt="Watch Servicing" id="img-watch">
+          <div class="service-display-content" id="content-watch">
+            <h4>Horological Excellence</h4>
+            <p>Find certified watchmakers authorized to service and repair the world's most prestigious luxury brands.</p>
+          </div>
+
+          <img src="images/image-37.png" alt="Valuation" id="img-valuation">
+          <div class="service-display-content" id="content-valuation">
+            <h4>Accurate Appraisal</h4>
+            <p>Ensure your pieces are accurately documented and valued by certified independent gemologists.</p>
+          </div>
+
+          <img src="images/image-13.png" alt="Restoration" id="img-restoration">
+          <div class="service-display-content" id="content-restoration">
+            <h4>Preserving History</h4>
+            <p>Specialists in antique and estate pieces dedicated to careful, period-accurate restoration.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 05: TRUST / PROFESSIONAL STANDARDS -->
+  <section class="section trust-section">
+    <div class="container">
+      <div class="trust-content">
+        <div class="trust-text">
+          <h2>EXPERTISE YOU CAN VERIFY.</h2>
+          <p>Our platform maintains the highest standards. We connect you exclusively with verified professionals, from master watchmakers to certified gemologists, ensuring that your most valuable pieces are handled with utmost expertise.</p>
+          <ul style="margin-bottom: 32px; list-style: none;">
+            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Verified Professionals</li>
+            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Specialist Profiles & Portfolios</li>
+            <li style="margin-bottom: 12px; display: flex; align-items: center; gap: 12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Customer Reviews</li>
+            <li style="display: flex; align-items: center; gap: 12px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-color)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Professional Credentials</li>
+          </ul>
+          
+          <div class="trust-stats">
+            <div class="stat-item">
+              <h4>500+</h4>
+              <p>Verified Professionals</p>
+            </div>
+            <div class="stat-item">
+              <h4>40+</h4>
+              <p>Service Specialties</p>
+            </div>
+            <div class="stat-item">
+              <h4>25+</h4>
+              <p>Global Cities</p>
+            </div>
+            <div class="stat-item">
+              <h4>4.8/5</h4>
+              <p>Average Rating</p>
+            </div>
+          </div>
+          <p style="font-size: 11px; color: var(--text-secondary); margin-top: 16px;">*Metrics based on sample directory data.</p>
+        </div>
+        <div class="trust-img">
+          <img src="images/image-15.png" alt="Professional Work">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 06: FINAL PREMIUM CTA -->
+  <section class="final-cta">
+    <div class="final-cta-bg" style="background-image: url('images/image-29.png');"></div>
+    <div class="final-cta-overlay"></div>
+    <div class="container final-cta-content">
+      <h2>YOUR NEXT DISCOVERY STARTS WITH THE RIGHT EXPERT.</h2>
+      <p>Explore specialists, compare expertise and connect with professionals who understand the value of exceptional craftsmanship.</p>
+      <div class="final-cta-actions">
+        <a href="professionals.html" class="btn btn-accent">EXPLORE DIRECTORY</a>
+        <button class="btn btn-outline trigger-enquiry">START AN ENQUIRY</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="text-decoration: none; color: inherit;">
+            <img src="logo.png" alt="Fine Jewelry & Watches Directory" class="brand-logo-img">
+            <div class="logo-text">
+              <span class="logo-title">FINE & TIME</span>
+              <span class="logo-desc">Professional Directory</span>
+            </div>
+          </a>
+          <p>The premier destination for discovering trusted fine jewelry and luxury watch professionals globally.</p>
+          <div class="social-icons" style="margin-top: 24px;">
+            <a href="#" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" aria-label="X">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="4" x2="20" y2="20"></line><line x1="20" y1="4" x2="4" y2="20"></line></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="professionals.html">Professionals</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Professional</h4>
+          <ul>
+            <li><a href="register.html">Submit Listing</a></li>
+            <li><a href="#">Verification</a></li>
+            <li><a href="professionals.html">Directory</a></li>
+            <li><a href="dashboard.html">Enquiries</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div class="copyright">
+          © 2026 Fine & Time. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Global Enquiry Popup -->
+  <div class="modal-overlay" id="enquiry-modal">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div class="modal-header">
+        <h2>LET'S FIND THE RIGHT PROFESSIONAL</h2>
+        <p>Submit your details and we will connect you with a verified specialist.</p>
+      </div>
+      <form id="enquiry-form">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" class="form-control" required placeholder="John Doe">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" required placeholder="john@example.com">
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="tel" class="form-control" placeholder="+1 (555) 000-0000">
+          </div>
+          <div class="form-group">
+            <label>Service Type</label>
+            <select class="form-control" required>
+              <option value="" disabled selected>Select a Service</option>
+              <option value="fine-jewelry">Fine Jewelry</option>
+              <option value="luxury-watches">Luxury Watches</option>
+              <option value="jewelry-repair">Jewelry Repair</option>
+              <option value="watch-repair">Watch Repair</option>
+              <option value="custom-jewelry">Custom Jewelry</option>
+              <option value="gemology">Gemology</option>
+              <option value="appraisal">Appraisal</option>
+              <option value="authentication">Authentication</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-group">
+            <label>Preferred Location</label>
+            <input type="text" class="form-control" placeholder="City or Region">
+          </div>
+          <div class="form-group">
+            <label>Preferred Date</label>
+            <input type="date" class="form-control">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Specific Professional / Service (Optional)</label>
+          <input type="text" class="form-control" placeholder="Name of specialist or detailed service">
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea class="form-control" required placeholder="Describe what you are looking for..."></textarea>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="btn btn-outline btn-cancel">CANCEL</button>
+          <button type="submit" class="btn btn-primary">SEND ENQUIRY</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Professional Profile Modal (Demo) -->
+  <div class="modal-overlay" id="profile-modal">
+    <div class="modal-content profile-modal">
+      <button class="modal-close">&times;</button>
+      <div class="profile-header">
+        <img src="images/image-12.png" alt="Profile" class="profile-img-large">
+        <div class="profile-header-info">
+          <div class="badge-verified" style="position: static; display: inline-flex; margin-bottom: 16px;">
+            <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path></svg> Verified Professional
+          </div>
+          <h2>Elena Laurent</h2>
+          <p style="color: var(--accent-color); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px;">Master Jewelry Designer</p>
+          <div style="display: flex; gap: 24px; color: var(--text-secondary); margin-bottom: 24px;">
+            <span>📍 Paris, France</span>
+            <span>⭐ 4.9 (120 Reviews)</span>
+            <span>15 Years Experience</span>
+          </div>
+          <div style="display: flex; gap: 16px;">
+            <button class="btn btn-primary trigger-enquiry">CONTACT PROFESSIONAL</button>
+            <button class="btn btn-outline btn-save" data-id="p1">SAVE PROFILE</button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="profile-tabs">
+        <button class="profile-tab active">About</button>
+        <button class="profile-tab">Expertise</button>
+        <button class="profile-tab">Gallery</button>
+        <button class="profile-tab">Reviews</button>
+      </div>
+      
+      <div class="profile-tab-content">
+        <h4 style="margin-bottom: 16px; font-size: 20px;">About the Professional</h4>
+        <p style="color: var(--text-secondary); margin-bottom: 24px;">Elena Laurent is a master jewelry designer specializing in bespoke engagement rings and resetting heirloom diamonds with a modern aesthetic. With over 15 years of experience crafting pieces in the heart of Paris, she combines traditional techniques with contemporary design sensibilities.</p>
+        
+        <h4 style="margin-bottom: 16px; font-size: 20px;">Services & Expertise</h4>
+        <ul style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; color: var(--text-secondary); list-style: square; padding-left: 20px;">
+          <li>Custom Engagement Rings</li>
+          <li>Heirloom Resetting</li>
+          <li>Diamond Sourcing</li>
+          <li>Bridal Jewelry</li>
+          <li>Platinum Fabrication</li>
+          <li>GIA Certified Consultation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <!-- Scroll to Top Button -->
+  <button id="scroll-to-top" class="scroll-to-top" aria-label="Scroll to top">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+</body>
+</html>
