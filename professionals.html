@@ -171,8 +171,12 @@
       <div class="directory-results">
         <div class="results-header">
           <div style="font-size: 14px; color: var(--text-secondary);"><span id="result-count">8</span> Professionals Found</div>
-          <div>
-            <select class="form-control" style="padding: 8px 12px; width: auto; font-size: 13px;" onchange="sortResults(this.value)">
+          <div style="display: flex; gap: 12px; align-items: center;">
+            <button class="btn btn-outline mobile-filter-btn" style="padding: 8px 12px; font-size: 13px;" onclick="document.querySelector('.directory-filters').classList.toggle('show-filters')">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 6px;"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+              FILTERS
+            </button>
+            <select class="form-control" style="padding: 8px 36px 8px 12px; width: auto; font-size: 13px;" onchange="sortResults(this.value)">
               <option value="recommended">Recommended</option>
               <option value="highest">Highest Rated</option>
               <option value="most">Most Reviewed</option>
